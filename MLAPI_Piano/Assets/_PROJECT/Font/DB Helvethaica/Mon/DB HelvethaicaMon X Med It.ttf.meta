@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 558431484e5fe5a498f536b63e6c5433
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - DB HelvethaicaMon X
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 31f8c3b7542bc5d4a901c14f2ea843b5, type: 3}
+  - {fileID: 12800000, guid: d115af8feebe65e43a43eea13a972554, type: 3}
+  - {fileID: 12800000, guid: 040535af6d3de2f4d93ecc5605209daa, type: 3}
+  - {fileID: 12800000, guid: 83d18ecf7245b97468ba07cbd20068c5, type: 3}
+  - {fileID: 12800000, guid: d2a6d270d6b6ff545ade83f32f9a4a2f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
