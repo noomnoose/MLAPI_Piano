@@ -7,44 +7,36 @@ using MLAPI.Messaging;
 public class PianoHolder : NetworkBehaviour
 {
 
-    [SerializeField] private NetworkObject Piano;
+    [SerializeField] private GameObject Piano;
     // Start is called before the first frame update
-    public override void NetworkStart()
+    private void Start()
     {
-        if (IsServer)
-        {
-            if (NetworkManager.Singleton.ConnectedClientsList.Count == 1)
-            {
-                transform.position = new Vector3(0f, 3f, 0f);
-            }
-            else
-            {
-                transform.position = new Vector3(0f, -3f, 0f);
-            }
-        }
+        Piano = GameObject.FindGameObjectWithTag("gameplay");
     }
-
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.A))
+        Piano = GameObject.FindGameObjectWithTag("gameplay");
+ 
+        if (Input.GetKey(KeyCode.A))
         {
-            Debug.Log("A pass is " + IsClient);
+            
             PianoServerRpc();
         }    
     }
 
-    [ServerRpc(Delivery = RpcDelivery.Unreliable)]
+    [ServerRpc]
     private void PianoServerRpc()
     {
         PianoClientRpc();
+        Debug.Log("A pass is " + IsClient);
     }
 
-    [ClientRpc(Delivery =  RpcDelivery.Unreliable)]
+    [ClientRpc]
     private void PianoClientRpc()
     {
         if (IsOwner) { return; }
 
-        //Piano.SetActive(false);
+        Piano.gameObject.SetActive(true);
     }
 }

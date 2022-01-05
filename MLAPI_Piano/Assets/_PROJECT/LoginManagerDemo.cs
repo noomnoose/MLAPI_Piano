@@ -67,25 +67,25 @@ public class LoginManagerDemo : NetworkBehaviour
         
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {
-            //Debug.Log("Connected with cilent");
-            //HostUI.gameObject.SetActive(false);
-            //CilentUI.gameObject.SetActive(true);
+            Debug.Log("Connected with cilent");
+            HostUI.gameObject.SetActive(false);
+            CilentUI.gameObject.SetActive(true);
 
-            if(IsHost)
-            {
-                HostUI.gameObject.SetActive(true);
-                CilentUI.gameObject.SetActive(false);
-                Debug.Log("Connected with host");
+            //if(IsHost)
+            //{
+            //    HostUI.gameObject.SetActive(true);
+            //    CilentUI.gameObject.SetActive(false);
+            //    Debug.Log("Connected with host");
 
-            }
+            //}
 
-            if (IsClient)
-            {
-                HostUI.gameObject.SetActive(false);
-                CilentUI.gameObject.SetActive(true);
-                Debug.Log("Connected with Client");
+            //if (IsClient)
+            //{
+            //    HostUI.gameObject.SetActive(false);
+            //    CilentUI.gameObject.SetActive(true);
+            //    Debug.Log("Connected with Client");
 
-            }
+            //}
         }
     }
 
